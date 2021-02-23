@@ -1,5 +1,9 @@
+const body = document.querySelector('body');
+body.addEventListener('click', () => {
+    body.classList.toggle('light');
+})
 const deg = 6;
-const hr = document.querySelector('#hr')
+const hr = document.querySelector('#hr');
 const mn = document.querySelector("#mn");
 const sc = document.querySelector('#sc');
 
