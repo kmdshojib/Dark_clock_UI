@@ -1,7 +1,10 @@
-const body = document.querySelector('body');
-body.addEventListener('click', () => {
+const toggle = document.querySelector('#toggle');
+toggle.addEventListener('click', () => {
+    const body = document.querySelector('body');
     body.classList.toggle('light');
 })
+
+
 const deg = 6;
 const hr = document.querySelector('#hr');
 const mn = document.querySelector("#mn");

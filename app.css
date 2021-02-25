@@ -126,29 +126,66 @@ body.light .sc:before {
     position: absolute;
     top: 30px;
     right: 150px;
-    width: 20px;
-    height: 20px;
-    font-size: 18px;
-    background: #d1dae3;
-    color: #d1dae3;
-    border-radius: 50%;
-    cursor: pointer;
+    /* width: 20px;
+    height: 20px; */
+    /* font-size: 18px; */
+    /* background: #d1dae3;
+    color: #d1dae3; */
+    /* border-radius: 50%; */
     display: flex;
     align-items: center;
 }
 
-.toggleClass::before {
+
+/* .toggleClass::before {
     position: absolute;
     content: 'Light Mode';
     left: 25px;
     white-space: nowrap;
-}
+} */
 
-body.light .toggleClass {
+
+/* body.light .toggleClass {
     background: #091921;
     color: #091921;
+} */
+
+
+/* body.light .toggleClass::before {
+    content: 'Dark Mode';
+} */
+
+input[type="checkBox"] {
+    position: relative;
+    width: 100px;
+    height: 40px;
+    -webkit-appearance: none;
+    outline: none;
+    background: #cad3de;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px rgba(0, 0, .2);
+    transition: .5s;
 }
 
-body.light .toggleClass::before {
-    content: 'Dark Mode';
+input:checked[type="checkBox"] {
+    background: #091921;
+}
+
+input[type="checkBox"]::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    background: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    transition: 0.5s;
+}
+
+input:checked[type="checkBox"]::before {
+    left: 60px;
 }
