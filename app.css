@@ -137,12 +137,12 @@ body.light .sc:before {
 }
 
 
-/* .toggleClass::before {
+.toggleClass::before {
     position: absolute;
-    content: 'Light Mode';
-    left: 25px;
-    white-space: nowrap;
-} */
+    content: '🌜';
+    left: 50px;
+    /* white-space: nowrap; */
+}
 
 
 /* body.light .toggleClass {
@@ -151,14 +151,16 @@ body.light .sc:before {
 } */
 
 
-/* body.light .toggleClass::before {
-    content: 'Dark Mode';
-} */
+body.light .toggleClass::before {
+    content: '🌞';
+    right: 100px;
+    
+}
 
 input[type="checkBox"] {
     position: relative;
-    width: 100px;
-    height: 40px;
+    width: 50px;
+    height: 20px;
     -webkit-appearance: none;
     outline: none;
     background: #cad3de;
@@ -175,8 +177,8 @@ input:checked[type="checkBox"] {
 input[type="checkBox"]::before {
     content: '';
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     top: 0;
     left: 0;
     border-radius: 20px;
@@ -186,6 +188,10 @@ input[type="checkBox"]::before {
     transition: 0.5s;
 }
 
-input:checked[type="checkBox"]::before {
-    left: 60px;
+input:checked + .icon::after{
+    left: 30px;
+}
+input:checked[type="checkBox"]::before  {
+    content: '';
+    left: 30px;
 }
